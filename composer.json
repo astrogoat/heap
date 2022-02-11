@@ -1,23 +1,23 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "astrogoat/heap",
+    "description": "A Heap app for Stratum",
     "keywords": [
-        ":vendor_name",
+        "astrogoat",
         "laravel",
-        ":package_slug"
+        "heap"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/astrogoat/heap",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Megan Miller",
+            "email": "megan.miller@smoldev.dev",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.0",
-        "astrogoat/stratum": "dev-develop",
+        "astrogoat/strata": "^0.1.0",
         "spatie/laravel-package-tools": "^1.4.3",
         "illuminate/contracts": "^8.37"
     },
@@ -31,13 +31,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Astrogoat\\Heap\\": "src",
+            "Astrogoat\\Heap\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Astrogoat\\Heap\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,10 +50,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Astrogoat\\Heap\\HeapServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "Heap": "Astrogoat\\Heap\\HeapFacade"
             }
         }
     },

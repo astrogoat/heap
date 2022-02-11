@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Astrogoat\Heap\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class HeapCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'heap';
 
     public $description = 'My command';
 
