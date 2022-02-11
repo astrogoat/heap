@@ -2,9 +2,9 @@
 
 namespace Astrogoat\Heap\Tests;
 
+use Astrogoat\Heap\HeapServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Astrogoat\Heap\HeapServiceProvider;
 
 class TestCase extends Orchestra
 {

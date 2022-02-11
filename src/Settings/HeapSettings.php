@@ -2,8 +2,8 @@
 
 namespace Astrogoat\Heap\Settings;
 
-use Helix\Lego\Settings\AppSettings;
 use Astrogoat\Heap\Actions\HeapAction;
+use Helix\Lego\Settings\AppSettings;
 
 class HeapSettings extends AppSettings
 {
