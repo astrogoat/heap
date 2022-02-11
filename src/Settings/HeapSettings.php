@@ -1,22 +1,22 @@
 <?php
 
-namespace VendorName\Skeleton\Settings;
+namespace Astrogoat\Heap\Settings;
 
 use Helix\Lego\Settings\AppSettings;
-use VendorName\Skeleton\Actions\SkeletonAction;
+use Astrogoat\Heap\Actions\HeapAction;
 
-class SkeletonSettings extends AppSettings
+class HeapSettings extends AppSettings
 {
-    // public string $url;
+    public string $app_id;
     // public string $access_token;
 
     protected array $rules = [
-        // 'url' => ['required', 'url'],
+        'app_id' => ['required'],
         // 'access_token' => ['required'],
     ];
 
     protected static array $actions = [
-        // SkeletonAction::class,
+        // HeapAction::class,
     ];
 
     // public static function encrypted(): array
@@ -26,6 +26,6 @@ class SkeletonSettings extends AppSettings
 
     public function description(): string
     {
-        return 'Interact with Skeleton.';
+        return 'Interact with Heap.';
     }
 }
