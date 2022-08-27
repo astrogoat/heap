@@ -2,10 +2,11 @@
 
 namespace Astrogoat\Heap;
 
-use Astrogoat\Heap\Settings\HeapSettings;
 use Helix\Lego\Apps\App;
 use Helix\Lego\LegoManager;
 use Spatie\LaravelPackageTools\Package;
+use Astrogoat\Heap\Settings\HeapSettings;
+use Helix\Lego\Apps\Services\IncludeFrontendViews;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class HeapServiceProvider extends PackageServiceProvider
@@ -17,7 +18,10 @@ class HeapServiceProvider extends PackageServiceProvider
             ->settings(HeapSettings::class)
             ->migrations([
                 __DIR__ . '/../database/migrations/settings',
-            ]);
+            ])
+            ->includeFrontendViews(function (IncludeFrontendViews $views) {
+                return $views->addToHead(['heap::script']);
+            });
     }
 
     public function registeringPackage()
@@ -29,6 +33,6 @@ class HeapServiceProvider extends PackageServiceProvider
 
     public function configurePackage(Package $package): void
     {
-        $package->name('heap')->hasViews();
+        $package->name('heap')->hasViews()->hasConfigFile();
     }
 }

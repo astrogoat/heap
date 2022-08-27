@@ -1,5 +1,9 @@
 <?php
-// config for Astrogoat/Heap
-return [
 
+return [
+    'include-frontend-views' => [
+        'head' => true,
+        'body' => true,
+        'end' => true,
+    ]
 ];
