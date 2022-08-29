@@ -2,11 +2,11 @@
 
 namespace Astrogoat\Heap;
 
+use Astrogoat\Heap\Settings\HeapSettings;
 use Helix\Lego\Apps\App;
+use Helix\Lego\Apps\Services\IncludeFrontendViews;
 use Helix\Lego\LegoManager;
 use Spatie\LaravelPackageTools\Package;
-use Astrogoat\Heap\Settings\HeapSettings;
-use Helix\Lego\Apps\Services\IncludeFrontendViews;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class HeapServiceProvider extends PackageServiceProvider
